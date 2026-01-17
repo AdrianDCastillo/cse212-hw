@@ -14,6 +14,7 @@ public static class Arrays
         // be implemented by another person.
 
         return []; // replace this return statement with your own
+        return  [];
     }
 
     /// <summary>

@@ -7,10 +7,28 @@ public static class ArraySelector
         var select = new[] { 1, 1, 1, 2, 2, 1, 2, 2, 2, 1};
         var intResult = ListSelector(l1, l2, select);
         Console.WriteLine("<int[]>{" + string.Join(", ", intResult) + "}"); // <int[]>{1, 2, 3, 2, 4, 4, 6, 8, 10, 5}
+
     }
 
     private static int[] ListSelector(int[] list1, int[] list2, int[] select)
     {
-        return [];
+        var results = new List<int>();
+        int count_i1 = 0;
+        int count_i2 = 0;
+        for (int i = 0; i < select.Length; i++)
+        {
+            if (select[i] == 1)
+            {
+                results.Add(list1[count_i1]);
+                count_i1++;
+            }
+
+            else if (select[i] == 2)
+            {
+                results.Add(list2[count_i2]);
+                count_i2++;
+            }
+        }
+        return results.ToArray();
     }
 }

@@ -19,9 +19,11 @@ public static class Algorithms {
         }
     }
 
-    private static double Time(Func<int, int> algorithm, int input, int times) {
+    private static double Time(Func<int, int> algorithm, int input, int times)
+    {
         var sw = Stopwatch.StartNew();
-        for (var i = 0; i < times; ++i) {
+        for (var i = 0; i < times; ++i)
+        {
             algorithm(input);
         }
 
@@ -35,7 +37,9 @@ public static class Algorithms {
     /// done the count is returned.
     /// </summary>
     /// <param name="size">the amount of work to do</param>
-    private static int Algorithm1(int size) {
+    /// /// Notation Big O is O(n)
+    private static int Algorithm1(int size)
+    {
         var count = 0;
         for (var i = 0; i < size; ++i)
             count += 1;
@@ -49,11 +53,14 @@ public static class Algorithms {
     /// done the count is returned.
     /// </summary>
     /// <param name="size">the amount of work to do</param>
-    private static int Algorithm2(int size) {
+    /// 
+    /// Notation Bog O is O(n^2)
+    private static int Algorithm2(int size)
+    {
         var count = 0;
         for (var i = 0; i < size; ++i)
-        for (var j = 0; j < size; ++j)
-            count += 1;
+            for (var j = 0; j < size; ++j)
+                count += 1;
 
         return count;
     }
@@ -64,6 +71,7 @@ public static class Algorithms {
     /// done the count is returned.
     /// </summary>
     /// <param name="size">the amount of work to do</param>
+    /// /// Notation Big O is O(log n)
     private static int Algorithm3(int size) {
         var count = 0;
         var start = 0;
