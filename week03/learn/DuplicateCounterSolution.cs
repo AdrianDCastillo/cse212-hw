@@ -19,9 +19,9 @@
             65
         ];
 
-        Console.WriteLine($"Number of items in the collection: {data.Length}");
-        Console.WriteLine($"Number of duplicates: {CountDuplicates(data)}");
-        Console.WriteLine($"Number of duplicates (alternate): {CountDuplicatesAlternate(data)}");
+        //Console.WriteLine($"Number of items in the collection: {data.Length}");
+        //Console.WriteLine($"Number of duplicates: {CountDuplicates(data)}");
+        //Console.WriteLine($"Number of duplicates (alternate): {CountDuplicatesAlternate(data)}");
     }
 
     /// <summary>
